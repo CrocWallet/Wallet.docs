@@ -1,0 +1,45 @@
+{
+  "review": "Current public images passed native OCR and manual entry-screen review on 2026-11-03",
+  "images": [
+    {
+      "file": "assets/images/01-welcome.jpg",
+      "sha256": "ef1fb6155c3c0b7db71067d89f393b19c29ea1781459589ab4f2a83548680189",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/03-import-canton.jpg",
+      "sha256": "f0d7030f600d72bb46badf17ba2a1ad26f775a7842ddc04e8596a5c40062c57d",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/03-import-networks.jpg",
+      "sha256": "53166ff5f45638cd38b6b94e45d55312bacdedb63a8abfeeb8f47f427de827cb",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/backup-private-key.png",
+      "sha256": "0137a248abb46e0cdf443734b818f29e492dfb8e2885b7df71c6e74dfb3d31fe",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/croc-wallet-icon.png",
+      "sha256": "13b1d8f2a7f4db431cce18808a847b300d3e623d93ee38149da7eda094e3bc68",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/permission-hero.png",
+      "sha256": "0137a248abb46e0cdf443734b818f29e492dfb8e2885b7df71c6e74dfb3d31fe",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/signature-hero.png",
+      "sha256": "c6b6bc35e59f4b11fc769e434b6ba26b92c38818a95aabe8c0bd1642b74dc20b",
+      "retired_brand_matches": 0
+    },
+    {
+      "file": "assets/images/welcome-wallet.png",
+      "sha256": "97eef357d36c517772b465dd78f433df77c8e67397bb3ea34a6e6686a8ea2066",
+      "retired_brand_matches": 0
+    }
+  ]
+}

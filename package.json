@@ -1,0 +1,12 @@
+{
+  "name": "croc-wallet-document",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Croc Wallet user and DApp developer documentation.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

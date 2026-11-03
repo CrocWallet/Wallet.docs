@@ -1,0 +1,13 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: Croc Wallet Docs
+  structure:
+    - type: space
+      key: space-wallet-docs
+      title: Documentation
+      path: documentation
+      default: true
+      content:
+        directory: ./
+        language: en
