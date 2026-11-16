@@ -1,6 +1,6 @@
 # Send Assets
 
-Croc Wallet prepares a transfer for the asset and recipient you choose, shows the fee and total before approval, and signs only after you confirm.
+Croc Wallet prepares a transfer for the asset and recipient you choose, shows the fee and total before approval, and signs only after you confirm. The steps below cover **Canton** transfers; see **EVM transfers and MAX** below for EVM addresses and gas fees.
 
 ## Before you send
 
@@ -37,5 +37,15 @@ For a new recipient, send a small test amount first and verify that it reached t
 - **Rejected confirmation or authentication:** no transfer should be assumed. Review the status shown by the Extension and start again only if you still intend to send.
 
 If the Extension reports success but the expected row is not yet visible, refresh **History**. Treat the ledger result, rather than a cached USD estimate, as authoritative.
+
+## EVM transfers and MAX
+
+Select the intended EVM network and asset, then enter the recipient's complete EVM address. EVM transfers use that chain's native coin for gas, such as **BNB on BNB Smart Chain**, including when sending an ERC-20 token.
+
+For a native-coin transfer, enter the recipient before selecting **MAX**. Croc Wallet estimates gas for that recipient and fills the maximum amount after reserving the estimated fee budget. The Send screen shows the minimum native-coin reserve and explains an insufficient balance. The reserve depends on the current quote and transaction; it is not a fixed BNB amount.
+
+If the amount plus gas exceeds the balance, reduce the native-coin amount or use **MAX**. If the account cannot cover gas itself, receive enough of that chain's native coin into the same account, then refresh. For ERC-20 transfers, keep that native-coin balance available separately from the token amount.
+
+If **Network Fee** is unavailable or estimation fails, use the displayed fee retry action after checking the recipient and connectivity. **Review Send** remains unavailable until a usable quote and sufficient balance are available. An expired quote needs a fresh estimate and review before sending.
 
 Next: [Transaction History](transaction-history.md)

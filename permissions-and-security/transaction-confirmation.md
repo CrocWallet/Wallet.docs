@@ -6,13 +6,15 @@ Croc Wallet 1.0.0 uses different surfaces for connection, message signing, trans
 
 ## Connection
 
-Version 1.0.0 has no per-site connection confirmation screen. When an unlocked wallet handles a DApp connection call, it returns the active account and remembers the requesting site. **Connected Sites** in Settings is a placeholder and does not provide a working disconnect action.
+SDK 1.0.0 uses a universal connection request. For a site and active account without an existing permission, Croc Wallet opens a **Wallet connection** confirmation showing the browser-verified origin and the available account/network information. Review it before approving. An existing permission for the same site and active account can be reused without another connection prompt.
 
-Initiate connection only from a DApp page whose browser origin you have verified. To end the connection, use the DApp's disconnect flow if it provides one, or lock Croc Wallet. Locking clears the remembered site and unlocked signing session.
+Legacy provider calls that do not request a universal connection can return the unlocked active account without this confirmation; they do not create universal namespace permissions. **Connected Sites** in Settings is still a placeholder and does not provide a working disconnect action.
+
+Initiate connection only from a DApp page whose browser origin you have verified. Use the DApp's Croc Wallet disconnect action to remove its stored origin permission. Locking clears the remembered site and unlocked signing session, but does not revoke stored universal permissions.
 
 ## Message-signing confirmation
 
-The message-signing screen shows the browser-verified requesting origin, selected account name with a shortened Party ID, network, signature type, and the exact message with a data preview. This is the only version 1.0.0 confirmation surface where the requesting origin is shown and protected against a page-supplied override.
+The message-signing screen shows the browser-verified requesting origin, selected account name with a shortened Party ID, network, signature type, and the exact message with a data preview. The origin is protected against a page-supplied override; universal connection approval uses this confirmation surface as well.
 
 A DApp-provided app label or purpose is context only. It cannot override the browser-verified origin and may not be displayed as a separate purpose field. Read the exact message and reject it if you cannot identify a human-readable purpose or do not understand what the signature authorizes.
 
@@ -34,7 +36,7 @@ Receive-preapproval enable and disable confirmations are Extension-owned. Review
 
 Across the relevant surfaces, verify:
 
-- **Browser-identified requesting origin:** on message-signing confirmation only. Verify a DApp's browser origin before initiating connection or transfer because those surfaces do not display it.
+- **Browser-identified requesting origin:** review it on universal connection and signing confirmations. Verify the DApp's browser origin before initiating a legacy connection or transfer; those flows do not provide the same origin confirmation.
 - **Action type:** distinguish connection, message signing, transfer, Offer decision, and permission change from the screen and action you initiated.
 - **Party ID:** compare complete Party IDs whenever a surface exposes them. If it shows only a shortened value, verify the complete ID before approval through a trusted source outside that review screen.
 - **Asset:** verify exact identity independently before the action. Neither transfer review nor Offer detail exposes the exact Token Standard asset ID, instrument administrator, or instrument ID; their configured labels and units are display context only.
@@ -44,6 +46,6 @@ Across the relevant surfaces, verify:
 
 ## If a request is unexpected
 
-Reject or cancel a signing, transfer, Offer, or permission request that you did not initiate or cannot verify from the fields available. Do not approve it merely to make an error disappear. For an unwanted DApp connection, use the DApp's disconnect flow if available or lock Croc Wallet; the Settings placeholder cannot disconnect a site in version 1.0.0.
+Reject or cancel a connection confirmation, signing, transfer, Offer, or permission request that you did not initiate or cannot verify from the fields available. Do not approve it merely to make an error disappear. For an unwanted existing connection, use the DApp's Croc Wallet disconnect action if available. Lock the wallet to stop signing; the Settings placeholder cannot disconnect a site in version 1.0.0.
 
 Developer reference: [Security Boundaries](../developers/security-boundaries.md)

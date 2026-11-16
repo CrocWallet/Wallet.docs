@@ -9,7 +9,7 @@ The Chrome Web Store listing is **not yet available**. The website's Install Ext
 Croc Wallet Extension 1.0.0 uses browser permissions for these purposes:
 
 - **Local encrypted data storage:** stores the encrypted wallet vault and Extension settings in browser storage.
-- **Clipboard writing:** copies an address or other public wallet information when you explicitly choose Copy.
+- **Clipboard writing:** copies content when you explicitly choose a copy action. This includes addresses and, in backup or export flows, recovery phrases or private keys. Treat clipboard contents from those flows as sensitive.
 - **DApp bridge injection:** injects a content script and bridge on all HTTP and HTTPS pages so supported DApps can discover Croc Wallet. The bridge forwards only allow-listed public wallet methods; sensitive approvals remain Extension-owned.
 - **Background alarm cleanup:** removes unused background alarm registrations.
 

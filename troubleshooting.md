@@ -33,7 +33,7 @@ The page loaded an older injected provider before the updated Extension started.
 
 1. Reload the Extension from the browser's extension manager.
 2. Refresh the DApp page after the Extension reload completes.
-3. Reopen the DApp's connection flow. Croc Wallet 1.0.0 does not show a per-site connection approval; if the DApp still holds stale connection state, use its disconnect flow and connect again.
+3. Reopen the DApp's connection flow. SDK 1.0.0 universal connections request approval when the site and active account lack an existing permission; legacy non-universal calls do not show that approval. If the DApp still holds stale connection state, use its Croc Wallet disconnect action and connect again.
 
 ## Bottom navigation tab does not update
 
@@ -149,8 +149,8 @@ The account password is rejected, the recovery phrase or private key is invalid,
 
 ### Cause
 
-For a newly registered account, unlock can fail at Backend account authentication or local-vault decryption. For an imported or restored wallet, the password unlocks the local vault and the signing key must satisfy the Backend challenge for the supplied Party ID. Import can also fail because the complete Party ID is missing or wrong, the phrase has the wrong word count or order, the private-key format is invalid, or the key controls a different Canton party.
+For a newly registered account, unlock can fail at Backend account authentication or local-vault decryption. For an imported or restored wallet, the password unlocks the local vault and the signing key must satisfy the Backend challenge for the restored Canton account. Import can also fail because the existing account binding cannot be resolved, the phrase has the wrong word count or order, the private-key format is invalid, or the key controls a different Canton party.
 
 ### Action
 
-Check the exact account identifier, keyboard layout, and password without sharing them. For import, enter the complete Party ID first, compare it with your offline record, then select the intended method and recheck the matching phrase word count and order or private-key format inside the Extension. After import, compare the complete Party ID again. Do not keep guessing a secret on an untrusted device, and do not delete local data unless you have recorded every complete Party ID and verified its matching offline recovery backup.
+Check the exact account identifier, keyboard layout, and password without sharing them. For import, select the network and supported method, then recheck the matching phrase word count and order or private-key format inside the Extension. The current import entry does not ask for a Party ID. After restoration, compare the complete Canton Party ID with your independent offline record before using the wallet. Do not keep guessing a secret on an untrusted device, and do not delete local data unless you have recorded every complete Party ID and verified its matching offline recovery backup.
