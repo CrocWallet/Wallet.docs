@@ -27,7 +27,7 @@ test('public documentation uses Croc branding without changing SDK contracts', a
   assert.match(config, /title: Croc Wallet Docs/);
 
   const install = await readFile(new URL('../developers/install-sdk.md', import.meta.url), 'utf8');
-  assert.match(install, /croc-wallet-dapp-sdk-1\.0\.0\.tgz/);
+  assert.match(install, /npm install @croc-wallet\/dapp-sdk/);
   assert.match(install, /crocWallet/);
   assert.match(install, /CrocWalletError/);
   assert.doesNotMatch(install, /@rocky-wallet\/dapp-sdk/);

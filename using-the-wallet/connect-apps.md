@@ -4,4 +4,4 @@ Croc Wallet application integrations are not yet open for public use. Official i
 
 Do not treat a third-party trading website as the Croc Wallet application. Verify the full origin, network, requested accounts and permissions before approving a connection.
 
-Developers can prepare an integration using the [Croc SDK preview](../developers/install-sdk.md). Registration and transfer APIs are open; registration requires email verification and an invitation code.
+Developers can prepare an integration using the [Croc SDK](../developers/install-sdk.md). Registration and transfer APIs are open; registration requires email verification and an invitation code.

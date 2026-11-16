@@ -548,7 +548,7 @@ test("developer docs pin the SDK and define its security boundary", async () => 
     /^## Public DApp methods[^\S\r\n]*\r?\n([\s\S]*?)(?=^##(?:\s|$)|(?![\s\S]))/m,
   );
 
-  assert.match(installSdk, /croc-wallet-dapp-sdk-1\.0\.0\.tgz/);
+  assert.match(installSdk, /npm install @croc-wallet\/dapp-sdk/);
   assert.ok(publicMethodsSection, "missing ## Public DApp methods section");
   const documentedMethods = [
     ...publicMethodsSection[1].matchAll(/^[\t ]*-[\t ]+`([^`\r\n]+)`[\t ]*$/gm),

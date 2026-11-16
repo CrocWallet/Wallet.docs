@@ -1,6 +1,6 @@
 # SDK 1.0.0 API Reference
 
-These signatures describe the preview `@croc-wallet/dapp-sdk@1.0.0` package. The Extension remains the authority for available chains, origin permissions and operations.
+These signatures describe the `@croc-wallet/dapp-sdk@1.0.0` package. The Extension remains the authority for available chains, origin permissions and operations.
 
 ## Exports
 

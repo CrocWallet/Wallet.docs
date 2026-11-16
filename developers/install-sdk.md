@@ -6,10 +6,10 @@
 - Node.js 20 or newer for package installation and tests.
 - A browser dApp served from an identifiable HTTP or HTTPS origin. The Extension obtains the requesting origin from the browser, not dApp metadata.
 
-The SDK is a preview and has not been published to npm. Obtain the reviewed preview tarball, then install it locally:
+Install [SDK 1.0.0 from npm](https://www.npmjs.com/package/@croc-wallet/dapp-sdk):
 
 ```sh
-npm install ./croc-wallet-dapp-sdk-1.0.0.tgz
+npm install @croc-wallet/dapp-sdk
 ```
 
 ```ts
